@@ -1,0 +1,40 @@
+2022-01-22 13:43:56.488 [main] INFO  App - Initializing Parking System
+2022-01-22 13:43:56.499 [main] INFO  InteractiveShell - App initialized!!!
+2022-01-22 16:46:05.236 [main] INFO  App - Initializing Parking System
+2022-01-22 16:46:05.244 [main] INFO  InteractiveShell - App initialized!!!
+2022-01-22 16:46:10.774 [main] INFO  DataBaseConfig - Create DB connection
+2022-01-22 16:46:12.069 [main] INFO  DataBaseConfig - Closing Result Set
+2022-01-22 16:46:12.069 [main] INFO  DataBaseConfig - Closing Prepared Statement
+2022-01-22 16:46:12.073 [main] INFO  DataBaseConfig - Closing DB connection
+2022-01-22 16:46:25.069 [main] INFO  DataBaseConfig - Create DB connection
+2022-01-22 16:46:25.127 [main] INFO  DataBaseConfig - Closing Prepared Statement
+2022-01-22 16:46:25.128 [main] INFO  DataBaseConfig - Closing DB connection
+2022-01-22 16:46:25.132 [main] INFO  DataBaseConfig - Create DB connection
+2022-01-22 16:46:25.198 [main] ERROR TicketDAO - Error fetching next available slot
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'VEHICLE_REG_NUMBER' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.parkit.parkingsystem.dao.TicketDAO.saveTicket(TicketDAO.java:34) [classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processIncomingVehicle(ParkingService.java:47) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:28) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:13) [classes/:?]
+2022-01-22 16:46:25.206 [main] INFO  DataBaseConfig - Closing DB connection
+2022-01-22 16:46:36.835 [main] INFO  DataBaseConfig - Create DB connection
+2022-01-22 16:46:36.874 [main] INFO  DataBaseConfig - Closing Result Set
+2022-01-22 16:46:36.875 [main] INFO  DataBaseConfig - Closing Prepared Statement
+2022-01-22 16:46:36.875 [main] INFO  DataBaseConfig - Closing DB connection
+2022-01-22 16:46:36.875 [main] ERROR ParkingService - Unable to process exiting vehicle
+java.lang.NullPointerException: Cannot invoke "com.parkit.parkingsystem.model.Ticket.setOutTime(java.util.Date)" because "ticket" is null
+	at com.parkit.parkingsystem.service.ParkingService.processExitingVehicle(ParkingService.java:105) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:32) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:13) [classes/:?]
+2022-01-22 16:47:20.884 [main] INFO  DataBaseConfig - Create DB connection
+2022-01-22 16:47:20.926 [main] INFO  DataBaseConfig - Closing Result Set
+2022-01-22 16:47:20.926 [main] INFO  DataBaseConfig - Closing Prepared Statement
+2022-01-22 16:47:20.927 [main] INFO  DataBaseConfig - Closing DB connection
+2022-01-22 16:47:27.836 [main] INFO  DataBaseConfig - Create DB connection
+2022-01-22 16:47:27.888 [main] INFO  DataBaseConfig - Closing Prepared Statement
+2022-01-22 16:47:27.891 [main] INFO  DataBaseConfig - Closing DB connection
+2022-01-22 16:47:27.891 [main] INFO  DataBaseConfig - Create DB connection
+2022-01-22 16:47:27.952 [main] INFO  DataBaseConfig - Closing DB connection
