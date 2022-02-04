@@ -1,0 +1,70 @@
+2022-02-03 19:09:58.531 [main] INFO  DataBaseTestConfig - Create DB connection
+2022-02-03 19:09:58.901 [main] INFO  DataBaseTestConfig - Closing DB connection
+2022-02-03 19:09:58.912 [main] INFO  DataBaseTestConfig - Create DB connection
+2022-02-03 19:09:58.936 [main] INFO  DataBaseTestConfig - Closing Result Set
+2022-02-03 19:09:58.936 [main] INFO  DataBaseTestConfig - Closing Prepared Statement
+2022-02-03 19:09:58.937 [main] INFO  DataBaseTestConfig - Closing DB connection
+2022-02-03 19:09:58.939 [main] INFO  DataBaseTestConfig - Create DB connection
+2022-02-03 19:09:58.946 [main] INFO  DataBaseTestConfig - Closing Prepared Statement
+2022-02-03 19:09:58.947 [main] INFO  DataBaseTestConfig - Closing DB connection
+2022-02-03 19:09:58.949 [main] INFO  DataBaseTestConfig - Create DB connection
+2022-02-03 19:09:58.960 [main] INFO  DataBaseTestConfig - Closing DB connection
+2022-02-03 19:09:58.973 [main] INFO  DataBaseTestConfig - Create DB connection
+2022-02-03 19:09:58.998 [main] INFO  DataBaseTestConfig - Closing Result Set
+2022-02-03 19:09:58.998 [main] INFO  DataBaseTestConfig - Closing Prepared Statement
+2022-02-03 19:09:58.998 [main] INFO  DataBaseTestConfig - Closing DB connection
+2022-02-03 19:09:58.999 [main] ERROR ParkingService - Unable to process exiting vehicle
+java.lang.IllegalArgumentException: Out time provided is incorrect:Thu Feb 03 19:09:58 EET 2022
+	at com.parkit.parkingsystem.service.FareCalculatorService.calculateFare(FareCalculatorService.java:11) ~[classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processExitingVehicle(ParkingService.java:106) ~[classes/:?]
+	at com.parkit.parkingsystem.integration.ParkingDataBaseIT.testParkingLotExit(ParkingDataBaseIT.java:61) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:532) ~[junit-platform-commons-1.3.2.jar:1.3.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.3.2.jar:5.3.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:171) ~[junit-jupiter-engine-5.3.2.jar:5.3.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72) ~[junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:167) ~[junit-jupiter-engine-5.3.2.jar:5.3.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:114) ~[junit-jupiter-engine-5.3.2.jar:5.3.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:59) ~[junit-jupiter-engine-5.3.2.jar:5.3.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:108) ~[junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72) ~[junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98) ~[junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74) ~[junit-platform-engine-1.3.2.jar:1.3.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:112) ~[junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72) ~[junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98) ~[junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74) ~[junit-platform-engine-1.3.2.jar:1.3.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:112) ~[junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72) [junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98) [junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74) [junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) [junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) [junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) [junit-platform-engine-1.3.2.jar:1.3.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:170) [junit-platform-launcher-1.2.0.jar:1.2.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:154) [junit-platform-launcher-1.2.0.jar:1.2.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:90) [junit-platform-launcher-1.2.0.jar:1.2.0]
+	at org.junit.platform.surefire.provider.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:132) [junit-platform-surefire-provider-1.2.0.jar:1.2.0]
+	at org.junit.platform.surefire.provider.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:111) [junit-platform-surefire-provider-1.2.0.jar:1.2.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.2.jar:2.22.2]
+2022-02-03 19:09:59.031 [main] INFO  DataBaseTestConfig - Create DB connection
+2022-02-03 19:09:59.040 [main] INFO  DataBaseTestConfig - Closing DB connection
+2022-02-03 19:09:59.041 [main] INFO  DataBaseTestConfig - Create DB connection
+2022-02-03 19:09:59.048 [main] INFO  DataBaseTestConfig - Closing Result Set
+2022-02-03 19:09:59.048 [main] INFO  DataBaseTestConfig - Closing Prepared Statement
+2022-02-03 19:09:59.049 [main] INFO  DataBaseTestConfig - Closing DB connection
+2022-02-03 19:09:59.049 [main] INFO  DataBaseTestConfig - Create DB connection
+2022-02-03 19:09:59.058 [main] INFO  DataBaseTestConfig - Closing Prepared Statement
+2022-02-03 19:09:59.059 [main] INFO  DataBaseTestConfig - Closing DB connection
+2022-02-03 19:09:59.060 [main] INFO  DataBaseTestConfig - Create DB connection
+2022-02-03 19:09:59.074 [main] INFO  DataBaseTestConfig - Closing DB connection

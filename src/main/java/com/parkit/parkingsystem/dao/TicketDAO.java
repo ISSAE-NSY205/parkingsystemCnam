@@ -21,9 +21,11 @@ public class TicketDAO {
 
     public boolean saveTicket(Ticket ticket){
         Connection con = null;
+        String recurrence;
         try {
             con = dataBaseConfig.getConnection();
             PreparedStatement ps = con.prepareStatement(DBConstants.SAVE_TICKET);
+            PreparedStatement ps2 = con.prepareStatement(DBConstants.GET_RECURRENTVEHICLE);
             //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
             //ps.setInt(1,ticket.getId());
             ps.setInt(1,ticket.getParkingSpot().getId());
@@ -31,6 +33,11 @@ public class TicketDAO {
             ps.setDouble(3, ticket.getPrice());
             ps.setTimestamp(4, new Timestamp(ticket.getInTime().getTime()));
             ps.setTimestamp(5, (ticket.getOutTime() == null)?null: (new Timestamp(ticket.getOutTime().getTime())) );
+            ps2.setString(1,ticket.getVehicleRegNumber());
+            
+            if(ps2.execute()==true){
+             ps.setBoolean(6,true);   
+            }
             return ps.execute();
         }catch (Exception ex){
             logger.error("Error fetching next available slot",ex);

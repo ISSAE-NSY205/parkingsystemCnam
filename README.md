@@ -33,12 +33,16 @@ https://dev.mysql.com/downloads/mysql/
 After downloading the mysql 8 installer and installing it, you will be asked to configure the password for the default `root` account.
 This code uses the default root account to connect and the password can be set as `rootroot`. If you add another user/credentials make sure to change the same in the code base.
 
+Action by Mira: I have changed the user account inside the code to become "newuser" and the password"new_password"
+
 ### Running App
 
 Post installation of MySQL, Java and Maven, you will have to set up the tables and data in the data base.
 For this, please run the sql commands present in the `Data.sql` file under the `resources` folder in the code base.
 
 Finally, you will be ready to import the code into an IDE of your choice and run the App.java to launch the application.
+
+Action by Mira:Application running correctly with no bugs and I added to the Ticket table an additional column called Recurrent in order to make it easier the check of a recurrent user and apply the 5% discount.
 
 ### Testing
 
@@ -47,3 +51,4 @@ The app has unit tests and integration tests written. More of these need to be a
 To run the tests from maven, go to the folder that contains the pom.xml file and execute the below command.
 
 `mvn test`
+Action by Mira: some tests are added but more tests need to be added as well.

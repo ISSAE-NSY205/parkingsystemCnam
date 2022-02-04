@@ -4,7 +4,7 @@ use prod;
 
 create table parking(
 PARKING_NUMBER int PRIMARY KEY,
-AVAILABLE bool NOT NULL,
+AVAILABLE boolean NOT NULL,
 TYPE varchar(10) NOT NULL
 );
 
@@ -15,6 +15,7 @@ create table ticket(
  PRICE double,
  IN_TIME DATETIME NOT NULL,
  OUT_TIME DATETIME,
+ RECURRENT boolean NOT NULL,
  FOREIGN KEY (PARKING_NUMBER)
  REFERENCES parking(PARKING_NUMBER));
 
@@ -31,7 +32,7 @@ use test;
 
 create table parking(
 PARKING_NUMBER int PRIMARY KEY,
-AVAILABLE bool NOT NULL,
+AVAILABLE boolean NOT NULL,
 TYPE varchar(10) NOT NULL
 );
 
@@ -42,6 +43,7 @@ create table ticket(
  PRICE double,
  IN_TIME DATETIME NOT NULL,
  OUT_TIME DATETIME,
+ RECURRENT boolean NOT NULL,
  FOREIGN KEY (PARKING_NUMBER)
  REFERENCES parking(PARKING_NUMBER));
 
